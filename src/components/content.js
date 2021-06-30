@@ -48,7 +48,7 @@ const Content = ({ title }) => (
               data-original="#d72878"
             />
           </svg>
-          {title} page
+          {title}
         </h3>
         <div className="font-normal text-sm mt-4 mb-4 text-white overflow-hidden">
           Grab yourself 10 free images from Adobe Stock in a 30-day free trial

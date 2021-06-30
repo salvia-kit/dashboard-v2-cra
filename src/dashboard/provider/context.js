@@ -13,21 +13,16 @@ export default function DashboardProvider({ children }) {
     setOpen(!open);
   }, [open]);
 
+  // set the html tag overflow to hidden
   // close side navigation when you click on a sidenav item. it's triggered when viewport is less than 1024px
-  const closeSidenav = () => {
-    if (window.innerWidth < 1024) {
-      setOpen(false);
-    }
-  };
-
-  // close side navigation on mobile when route starts changing and set the html tag overflow to hidden
   React.useEffect(() => {
     document.documentElement.style.overflow = 'hidden';
-
     return history.listen(() => {
-      closeSidenav();
+      if (open && window.innerWidth < 1024) {
+        setOpen(false);
+      }
     });
-  }, [history]);
+  }, [history, open]);
 
   // close side navigation on click outside when viewport is less than 1024px
   React.useEffect(() => {

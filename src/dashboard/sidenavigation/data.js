@@ -1,4 +1,12 @@
-import * as Icon from './icons';
+import UxIcon from './icons/Ux';
+import ArIcon from './icons/ar';
+import AppsIcon from './icons/apps';
+import VideosIcon from './icons/videos';
+import UpdatesIcon from './icons/updates';
+import PhotographyIcon from './icons/photography';
+import IllustrationIcon from './icons/illustration';
+import DocumentationIcon from './icons/documentation';
+import GraphicDesignIcon from './icons/graphic-design';
 
 const data = [
   {
@@ -6,12 +14,12 @@ const data = [
     content: [
       {
         title: 'All Apps',
-        icon: <Icon.AllAppsSVG />,
+        icon: <AppsIcon />,
         link: '/',
       },
       {
         title: 'Updates',
-        icon: <Icon.UpdatesSVG />,
+        icon: <UpdatesIcon />,
         link: '/admin/updates',
       },
     ],
@@ -21,32 +29,32 @@ const data = [
     content: [
       {
         title: 'Photography',
-        icon: <Icon.PhotographySVG />,
+        icon: <PhotographyIcon />,
         link: '/admin/photography',
       },
       {
         title: 'Graphic Design',
-        icon: <Icon.GraphicDesignSVG />,
+        icon: <GraphicDesignIcon />,
         link: '/admin/graphic-design',
       },
       {
         title: 'Videos',
-        icon: <Icon.VideosSVG />,
+        icon: <VideosIcon />,
         link: '/admin/videos',
       },
       {
         title: 'Illustrations',
-        icon: <Icon.IllustrationSVG />,
+        icon: <IllustrationIcon />,
         link: '/admin/illustration',
       },
       {
         title: 'UI/UX',
-        icon: <Icon.UxSVG />,
+        icon: <UxIcon />,
         link: '/admin/ux',
       },
       {
         title: '3D/AR',
-        icon: <Icon.ArSVG />,
+        icon: <ArIcon />,
         link: '/admin/ar',
       },
     ],
@@ -56,7 +64,7 @@ const data = [
     content: [
       {
         title: 'Documentation',
-        icon: <Icon.DocumentationSVG />,
+        icon: <DocumentationIcon />,
         link: '/admin/documentation',
       },
     ],

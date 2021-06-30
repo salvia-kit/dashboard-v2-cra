@@ -1,9 +1,9 @@
-import { useToggle } from '../utils/context';
+import { useToggle } from '../provider/context';
 
-const TopNavigation = () => {
+export default function TopNavigation() {
   const { toggle } = useToggle();
   return (
-    <header className="items-center h-20 relative w-full z-10">
+    <header className="h-16 items-center relative w-full z-10 md:h-20">
       <div className="flex flex-center flex-col h-full justify-center mx-auto px-3 relative">
         <div className="flex items-center pl-1 relative w-full sm:pr-2 sm:ml-0 lg:max-w-68 ">
           <div className="container flex h-auto h-full left-0 relative w-3/4">
@@ -90,6 +90,4 @@ const TopNavigation = () => {
       </div>
     </header>
   );
-};
-
-export default TopNavigation;
+}

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages';
 import ARPage from './pages/admin/ar';
 import UIUXPage from './pages/admin/ux';
-import DashboardWrapper from './dashboard';
+import DashboardLayout from './dashboard';
 import VideosPage from './pages/admin/videos';
 import UpdatesPage from './pages/admin/updates';
 import PhotographyPage from './pages/admin/photography';
@@ -14,37 +14,37 @@ import GraphicDesignPage from './pages/admin/graphic-design';
 function App() {
   return (
     <Router>
-      <DashboardWrapper>
+      <DashboardLayout>
         <Switch>
-          <Route path="/" exact={true}>
+          <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/admin/ar" exact={true}>
+          <Route exact path="/admin/ar">
             <ARPage />
           </Route>
-          <Route path="/admin/documentation" exact={true}>
+          <Route exact path="/admin/documentation">
             <DocumentationPage />
           </Route>
-          <Route path="/admin/graphic-design" exact={true}>
+          <Route exact path="/admin/graphic-design">
             <GraphicDesignPage />
           </Route>
-          <Route path="/admin/illustration" exact={true}>
+          <Route exact path="/admin/illustration">
             <IllustrationPage />
           </Route>
-          <Route path="/admin/photography" exact={true}>
+          <Route exact path="/admin/photography">
             <PhotographyPage />
           </Route>
-          <Route path="/admin/updates" exact={true}>
+          <Route exact path="/admin/updates">
             <UpdatesPage />
           </Route>
-          <Route path="/admin/ux" exact={true}>
+          <Route exact path="/admin/ux">
             <UIUXPage />
           </Route>
-          <Route path="/admin/videos" exact={true}>
+          <Route exact path="/admin/videos">
             <VideosPage />
           </Route>
         </Switch>
-      </DashboardWrapper>
+      </DashboardLayout>
     </Router>
   );
 }
